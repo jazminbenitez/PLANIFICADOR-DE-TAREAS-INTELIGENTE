@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TaskFlow - Planificador Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- CABECERA -->
+    <header class="topbar">
+      <h1>TaskFlow</h1>
+      <p>Planificador Inteligente</p>
+    </header>
+
+    <!-- FORMULARIO DE TAREA -->
+    <section class="nueva-tarea">
+      <input type="text" placeholder="¿Qué necesitas hacer hoy?">
+      <select>
+        <option>Alta</option>
+        <option>Media</option>
+        <option>Baja</option>
+      </select>
+      <button>+</button>
+
+      <div class="tags">
+        <button class="tag trabajo">Trabajo</button>
+        <button class="tag personal">Personal</button>
+        <button class="tag estudio">Estudio</button>
+      </div>
+
+    </section>
+
+    <!-- LISTA DE TAREAS -->
+    <section class="lista-tareas">
+      <h2>Tareas de Hoy</h2>
+      <div class="filtros">
+        <button class="activo">Todas</button>
+        <button>Pendientes</button>
+        <button>Completadas</button>
+      </div>
+
+      <ul>
+        <li class="tarea alta">
+          <input type="checkbox">
+          <div>
+            <strong>Estudiar JavaScript</strong>
+            <span>09:00 AM</span>
+          </div>
+        </li>
+        <li class="tarea media">
+          <input type="checkbox">
+          <div>
+            <strong>Preparar almuerzo</strong>
+            <span>12:00 PM</span>
+          </div>
+        </li>
+        <li class="tarea baja completada">
+          <input type="checkbox" checked>
+          <div>
+            <strong>Ver Netflix</strong>
+            <span>Completada</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ESTADÍSTICAS Y SUGERENCIAS -->
+    <aside class="panel-lateral">
+      <div class="estadisticas">
+        <h3>Estadísticas de Hoy</h3>
+        <p>Completadas: <b>1</b></p>
+        <p>Pendientes: <b>2</b></p>
+        <p>Total: <b>3</b></p>
+        <div class="barra-progreso"><div style="width: 33%;"></div></div>
+      </div>
+
+      <div class="sugerencias">
+        <h3>Sugerencias IA</h3>
+        <div class="sugerencia prioridad">
+          <strong>📌 Prioridad Alta</strong>
+          <p>Completá "Estudiar JavaScript" primero. Es tu tarea más importante.</p>
+        </div>
+        <div class="sugerencia organizacion">
+          <strong>🧠 Optimización</strong>
+          <p>Programá el almuerzo después del estudio. Te ayuda a mantener el foco.</p>
+        </div>
+      </div>
+
+      <div class="resumen-semanal">
+        <h3>Resumen Semanal</h3>
+        <ul>
+          <li>Lunes <span class="puntos activos"></span></li>
+          <li>Martes <span class="puntos"></span></li>
+          <li>Hoy <span class="puntos activos"></span></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>
